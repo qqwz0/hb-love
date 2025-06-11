@@ -1,5 +1,6 @@
 import Hero from './components/Hero';
 import Envelope from './components/Envelope';
+import TimelineSlider from './components/Timeline';
 import { HeartParticle } from './components/ui/HeartParticles';
 import { useMemo } from 'react';
 
@@ -24,7 +25,7 @@ function App() {
         <Envelope />
       </section>
       <section className="h-screen snap-start">
-        <Envelope />
+        <TimelineSlider />
       </section>
     </div>
   );
