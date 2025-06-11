@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import backGroundImage from '../assets/images/hero-bg.png';
 import Countdown from './Countdown';
 import { HeartParticle } from './ui/HeartParticles';
-import Envelope from './ui/Envelope';
 
 interface HeroProps {
   name?: string;
@@ -36,7 +35,7 @@ const Hero = ({
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image*/}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
