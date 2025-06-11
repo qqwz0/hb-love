@@ -228,6 +228,7 @@ const TimelineSlider: React.FC = () => {
                         controls
                         autoPlay
                         loop
+                        muted={true}
                         className="w-full h-90 object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     )}

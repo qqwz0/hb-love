@@ -5,15 +5,11 @@ import Countdown from './Countdown';
 import { HeartParticle } from './ui/HeartParticles';
 
 interface HeroProps {
-  name?: string;
   backgroundImage?: string;
-  birthdayDate?: string;
+  isExpired?: boolean;
 }
 
-const Hero = ({
-  backgroundImage = backGroundImage,
-  //   birthdayDate = '2025-12-25',
-}: HeroProps) => {
+const Hero = ({ backgroundImage = backGroundImage }: HeroProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -35,7 +31,7 @@ const Hero = ({
   };
 
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative h-full flex items-center justify-center overflow-hidden">
       {/* Background Image*/}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -45,7 +41,7 @@ const Hero = ({
 
       {/* Heart Particles */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(12)].map((_, i) => (
+        {[...Array(10)].map((_, i) => (
           <HeartParticle key={i} delay={i * 2} />
         ))}
       </div>
@@ -87,7 +83,7 @@ const Hero = ({
           ДЕНЬ НАРОДЖЕННЯ ✨
         </motion.p>
 
-        <Countdown targetDate="06-09-2025" isLoaded={isLoaded} />
+        <Countdown targetDate="06-12-2025" isLoaded={isLoaded} />
       </div>
     </div>
   );
